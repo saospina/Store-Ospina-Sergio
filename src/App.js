@@ -1,8 +1,12 @@
+import { HeaderComponent } from "./components/header/HeaderComponent";
+import ContentContainer from "./components/content/ContentContainer";
+
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello world</h1>
+      <HeaderComponent />
+      <ContentContainer />
     </div>
   );
 }

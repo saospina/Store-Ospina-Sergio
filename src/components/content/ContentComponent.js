@@ -1,36 +1,55 @@
 import React, { useEffect } from 'react'
+import usePagination from './ContentPagination.js';
 //import PropTypes from 'prop-types'
 
-const ContentComponent = ({ getListProducts, productsList }) => {
-
+const ContentComponent = ({ getProducts, products }) => {
+    const { currentData, maxPage, next, prev, currentPage, jump } = usePagination(products, 4);
+    const pages = [...Array(maxPage).keys()];
+    const dataFiltered = currentData();
 
     useEffect(() => {
-        getListProducts()
-    }, [])
+        getProducts();
+    }, []);
 
-    console.log(productsList, 'I am in the component');
+
     return (
         <div className="container">
             <div className="row">
-                {productsList.map(product => {
+                {dataFiltered.map(product => {
                     return (
                         <div className="col-md-3" key={product._id}>
                             <div className="card mb-3 border-info">
-                                <h4 class="card-title">Card title Pill</h4>
-                                <img src={product.img.hdUrl} class="card-img-top" alt={product.img.hdUrl} />
-                                <div className="card-body">
-                                    <h5 className="card-title">Special title treatment</h5>
-                                    <h6 className="card-subtitle text-muted">Support card subtitle</h6>
-                                    <div className="card-footer text-muted">
-                                        2 days ago
-                                </div>
+                                <img src={product.img.hdUrl} className="card-img-top" alt={product.img.hdUrl} />
+                                <div className="card-body text-center">
+                                    <h6 className="card-subtitle text-muted">{product.category}</h6>
+                                    <hr />
+                                    <div className="text-muted">{product.name}</div>
                                 </div>
                             </div>
                         </div>
                     )
                 })}
-            </div>
 
+            </div>
+            <div>
+                <ul className="pagination justify-content-center">
+                    <li className="page-item" onClick={prev} >
+                        <a className="page-link">&laquo;</a>
+                    </li>
+                    {pages.map(page =>
+                        (<li
+                            key={page}
+                            className={(page + 1) === currentPage ? "page-item active" : "page-item"}
+                            onClick={() => jump(page + 1)}
+                        >
+                            <a className="page-link">{page + 1}</a>
+                        </li>)
+                    )}
+                    <li className="page-item" onClick={next}>
+                        <a className="page-link">&raquo;</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     )
 }
@@ -39,4 +58,4 @@ const ContentComponent = ({ getListProducts, productsList }) => {
 
 } */
 
-export default ContentComponent
+export default ContentComponent;

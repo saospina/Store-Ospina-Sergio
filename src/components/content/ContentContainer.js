@@ -1,19 +1,18 @@
 import { connect } from "react-redux";
 
 import ContentComponent from "./ContentComponent";
-import { ContentThunk } from "../../redux/thunks/ContentThunk";
+import { mostRecentProductsThunk } from "../../redux/thunks/ContentThunk";
 
-const mapStateToProps = ({ ContentReducer }) => {
-    console.log(ContentReducer, 'This is the state');
+const mapStateToProps = ({ContentReducer}) => {
     return {
-        productsList: ContentReducer
+        products: ContentReducer
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getListProducts: () => {
-            dispatch(ContentThunk());
+        getProducts: () => {
+            dispatch(mostRecentProductsThunk());
         }
     };
 };

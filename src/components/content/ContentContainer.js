@@ -3,7 +3,8 @@ import { connect } from "react-redux";
 import ContentComponent from "./ContentComponent";
 import { mostRecentProductsThunk } from "../../redux/thunks/ContentThunk";
 
-const mapStateToProps = ({ContentReducer}) => {
+const mapStateToProps = ({ContentReducer, UserReducer}) => {
+    console.log(UserReducer, 'user reducer');
     return {
         products: ContentReducer
     };

@@ -3,7 +3,7 @@ import usePagination from './ContentPagination.js';
 //import PropTypes from 'prop-types'
 
 const ContentComponent = ({ getProducts, products }) => {
-    const { currentData, maxPage, next, prev, currentPage, jump } = usePagination(products, 4);
+    const { currentData, maxPage, next, prev, currentPage, jump } = usePagination(products, 8);
     const pages = [...Array(maxPage).keys()];
     const dataFiltered = currentData();
 
@@ -24,6 +24,7 @@ const ContentComponent = ({ getProducts, products }) => {
                                     <h6 className="card-subtitle text-muted">{product.category}</h6>
                                     <hr />
                                     <div className="text-muted">{product.name}</div>
+                                    <i className="fab fa-shopping-bag"></i>
                                 </div>
                             </div>
                         </div>

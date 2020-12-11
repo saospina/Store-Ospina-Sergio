@@ -1,12 +1,12 @@
-import { HeaderComponent } from "./components/header/HeaderComponent";
 import ContentContainer from "./components/content/ContentContainer";
 import FilterContainer from "./components/filter/FilterContainer";
+import HeaderContainer from "./components/header/HeaderContainer";
 
 
 function App() {
   return (
     <div className="App">
-      <HeaderComponent />
+      <HeaderContainer />
       <FilterContainer />
       <ContentContainer />
     </div>

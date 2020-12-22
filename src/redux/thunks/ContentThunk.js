@@ -1,5 +1,5 @@
-import { showMostRecentProducts, showLowestPriceProducts, showHighesttPriceProducts } from "../actions/ContentAction";
-import { getProducts } from '../../services/apiServices';
+import { showMostRecentProducts, showLowestPriceProducts, showHighesttPriceProducts, redeemByProduct } from "../actions/ContentAction";
+import { getProducts, redeemProducts } from '../../services/apiServices';
 
 export const mostRecentProductsThunk = () => async (dispatch) => {
   const response = await getProducts();
@@ -13,3 +13,7 @@ export const highestPriceProductsThunk = () => async (dispatch) => {
   const response = await getProducts();
   dispatch(showHighesttPriceProducts(response));
 };
+export const redeemProductsThunk = (productId) => async (dispatch) => {
+  const response = await redeemProducts(productId);
+  dispatch(redeemByProduct(response));
+}

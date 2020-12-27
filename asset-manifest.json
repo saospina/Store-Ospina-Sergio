@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Store-Ospina-Sergio/static/css/main.820a3099.chunk.css",
-    "main.js": "/Store-Ospina-Sergio/static/js/main.aec6cda3.chunk.js",
-    "main.js.map": "/Store-Ospina-Sergio/static/js/main.aec6cda3.chunk.js.map",
+    "main.js": "/Store-Ospina-Sergio/static/js/main.4d78bcac.chunk.js",
+    "main.js.map": "/Store-Ospina-Sergio/static/js/main.4d78bcac.chunk.js.map",
     "runtime-main.js": "/Store-Ospina-Sergio/static/js/runtime-main.a2172f6f.js",
     "runtime-main.js.map": "/Store-Ospina-Sergio/static/js/runtime-main.a2172f6f.js.map",
     "static/js/2.42d54af5.chunk.js": "/Store-Ospina-Sergio/static/js/2.42d54af5.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.a2172f6f.js",
     "static/js/2.42d54af5.chunk.js",
     "static/css/main.820a3099.chunk.css",
-    "static/js/main.aec6cda3.chunk.js"
+    "static/js/main.4d78bcac.chunk.js"
   ]
 }

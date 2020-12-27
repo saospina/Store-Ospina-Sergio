@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 
 import ContentComponent from "./ContentComponent";
 import { mostRecentProductsThunk, redeemProductsThunk } from "../../redux/thunks/ContentThunk";
+import { userThunk } from '../../redux/thunks/UserThunk';
 
 const mapStateToProps = ({ContentReducer, UserReducer}) => {
     console.log(ContentReducer, 'user products');
@@ -16,9 +17,12 @@ const mapDispatchToProps = (dispatch) => {
         getProducts: () => {
             dispatch(mostRecentProductsThunk());
         },
-        handleRedeem: (productId) => {
+        onRedeem: (productId) => {
             dispatch(redeemProductsThunk(productId));
-        }
+        },
+        onUser: () => {
+            dispatch(userThunk());
+        },
     };
 };
 

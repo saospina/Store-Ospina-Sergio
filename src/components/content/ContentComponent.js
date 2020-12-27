@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import usePagination from './ContentPagination.js';
 
 
-const ContentComponent = ({ getProducts, products, userInfo, handleRedeem }) => {
+const ContentComponent = ({ getProducts, products, userInfo, onRedeem, onUser }) => {
     const { currentData, maxPage, next, prev, currentPage, jump } = usePagination(products, 8);
     const pages = [...Array(maxPage).keys()];
     const dataFiltered = currentData();
@@ -10,6 +10,12 @@ const ContentComponent = ({ getProducts, products, userInfo, handleRedeem }) => 
     useEffect(() => {
         getProducts();
     }, []);
+
+    const handleRedeem = (productId, e) => {
+        e.preventDefault();
+        onRedeem(productId);
+        onUser();  
+    }
 
 
     return (
@@ -27,9 +33,10 @@ const ContentComponent = ({ getProducts, products, userInfo, handleRedeem }) => 
                                         </button>
                                         ) :
                                         (<button type="button" className="btn btn-success"
-                                        onClick={() => handleRedeem(product.id)}>
+                                        onClick={(e) => handleRedeem(product._id, e)}>
                                             Buy now <span className="badge rounded-pill bg-info">{product.cost}</span>
-                                        </button>)
+                                        </button>
+                                        )
                                 }
                                 <img src={product.img.hdUrl} className="card-img-top" alt={product.img.hdUrl} />
                                 <div className="card-body text-center">

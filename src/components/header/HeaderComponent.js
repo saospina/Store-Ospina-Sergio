@@ -8,7 +8,6 @@ export const HeaderComponent = ({ onUser, userInfo, onPoints }) => {
 
     const updateFilters = (event) => {
         const { value } = event.target;
-        console.log(value,'selected');
         onPoints(value);
     }
 

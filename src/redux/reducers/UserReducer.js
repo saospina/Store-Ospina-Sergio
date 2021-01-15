@@ -5,7 +5,7 @@ const UserReducer = (state = [], action) => {
         case SHOW_USER:
             return action.payload.userInfo;
         case ADD_POINTS:
-            return action.payload.pointsUpdated;
+            return {... state, points:action.payload.pointsUpdated["New Points"]};
         default:
             return state
     }

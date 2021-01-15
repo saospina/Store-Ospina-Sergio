@@ -4,7 +4,6 @@ import HeaderComponent from "./HeaderComponent";
 import { userThunk, pointsThunk } from "../../redux/thunks/UserThunk";
 
 const mapStateToProps = ({UserReducer}) => {
-    console.log(UserReducer, 'userInfooo ');
     return {
         userInfo: UserReducer
     };

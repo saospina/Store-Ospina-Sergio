@@ -1,0 +1,12 @@
+.navbar-nav {
+    width: 100%;
+    align-items: center;
+}
+
+.search-button {
+    margin: 1rem 0;
+}
+.custom-badge-pill {
+    width: 70px;
+    height: 25px
+}

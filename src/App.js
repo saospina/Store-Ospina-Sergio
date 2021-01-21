@@ -5,11 +5,14 @@ import HeaderContainer from "./components/header/HeaderContainer";
 
 function App() {
   return (
+    <>
+    {/* Global Spinner */}
     <div className="App">
       <HeaderContainer />
       <FilterContainer />
       <ContentContainer />
     </div>
+    </>
   );
 }
 

@@ -5,7 +5,6 @@ import { mostRecentProductsThunk, redeemProductsThunk } from "../../redux/thunks
 import { userThunk } from '../../redux/thunks/UserThunk';
 
 const mapStateToProps = ({ContentReducer, UserReducer}) => {
-    console.log(ContentReducer, 'user products');
     return {
         products: ContentReducer,
         userInfo: UserReducer

@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 
 import './index.css';
 import App from './App';
+import GlobalSpinner from '../global-spinner/GlobalSpinner';
 import { store } from './redux/store'
 
 

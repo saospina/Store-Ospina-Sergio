@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+
 import usePagination from './ContentPagination.js';
 
 
@@ -27,7 +28,7 @@ const ContentComponent = ({ getProducts, products, userInfo, onRedeem, onUser })
                             <div className="card mb-3 border-info">
                                 {
                                     userInfo.points < product.cost ?
-                                        (<button type="button" className="btn btn-success">
+                                        (<button type="button" className="btn btn-secondary disabled">
                                             Points needed
                                             <span className="badge rounded-pill bg-info">{product.cost - userInfo.points}</span>
                                         </button>

@@ -4,9 +4,10 @@ import ContentComponent from "./ContentComponent";
 import { mostRecentProductsThunk, redeemProductsThunk } from "../../redux/thunks/ContentThunk";
 import { userThunk } from '../../redux/thunks/UserThunk';
 
-const mapStateToProps = ({ContentReducer, UserReducer}) => {
+const mapStateToProps = ({ ContentReducer, UserReducer }) => {
+    const { data } = ContentReducer
     return {
-        products: ContentReducer,
+        products: data,
         userInfo: UserReducer
     };
 };

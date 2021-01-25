@@ -15,8 +15,6 @@ export const getUser = async () => {
     return data;
 };
 export const addPointsService = async (points) => {
-    console.log(points, 'points on service');
-    // const url = `https://coding-challenge-api.aerolab.co/user/points`;
     const url = getURL('user/points');
     const response = await fetch(url, {
         method: 'POST',
@@ -24,7 +22,6 @@ export const addPointsService = async (points) => {
         headers
     });
     const data = await response.json();
-    console.log(data, 'add points service');
     return data;
 };
 export const redeemProducts = async (productId) => {

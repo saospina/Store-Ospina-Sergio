@@ -62,8 +62,8 @@ export const HeaderComponent = ({ onUser, userInfo, onPoints }) => {
                                     className="custom-select"
                                     onChange={(e) => updateFilters(e)}
                                 >
-                                    {pricesList.map(price =>
-                                        <option defaultValue="0" value={price.value}>{price.key}</option>
+                                    {pricesList.map((price, index) =>
+                                        <option key={index} defaultValue="0" value={price.value}>{price.key}</option>
                                     )}
                                 </select>
                             </div>

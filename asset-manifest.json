@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Store-Ospina-Sergio/static/css/main.b76c75c5.chunk.css",
-    "main.js": "/Store-Ospina-Sergio/static/js/main.cb5c04a6.chunk.js",
-    "main.js.map": "/Store-Ospina-Sergio/static/js/main.cb5c04a6.chunk.js.map",
+    "main.css": "/Store-Ospina-Sergio/static/css/main.bfe35966.chunk.css",
+    "main.js": "/Store-Ospina-Sergio/static/js/main.995aaed5.chunk.js",
+    "main.js.map": "/Store-Ospina-Sergio/static/js/main.995aaed5.chunk.js.map",
     "runtime-main.js": "/Store-Ospina-Sergio/static/js/runtime-main.a2172f6f.js",
     "runtime-main.js.map": "/Store-Ospina-Sergio/static/js/runtime-main.a2172f6f.js.map",
-    "static/js/2.5760a427.chunk.js": "/Store-Ospina-Sergio/static/js/2.5760a427.chunk.js",
-    "static/js/2.5760a427.chunk.js.map": "/Store-Ospina-Sergio/static/js/2.5760a427.chunk.js.map",
+    "static/js/2.a4788d91.chunk.js": "/Store-Ospina-Sergio/static/js/2.a4788d91.chunk.js",
+    "static/js/2.a4788d91.chunk.js.map": "/Store-Ospina-Sergio/static/js/2.a4788d91.chunk.js.map",
     "index.html": "/Store-Ospina-Sergio/index.html",
-    "static/css/main.b76c75c5.chunk.css.map": "/Store-Ospina-Sergio/static/css/main.b76c75c5.chunk.css.map",
-    "static/js/2.5760a427.chunk.js.LICENSE.txt": "/Store-Ospina-Sergio/static/js/2.5760a427.chunk.js.LICENSE.txt"
+    "static/css/main.bfe35966.chunk.css.map": "/Store-Ospina-Sergio/static/css/main.bfe35966.chunk.css.map",
+    "static/js/2.a4788d91.chunk.js.LICENSE.txt": "/Store-Ospina-Sergio/static/js/2.a4788d91.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a2172f6f.js",
-    "static/js/2.5760a427.chunk.js",
-    "static/css/main.b76c75c5.chunk.css",
-    "static/js/main.cb5c04a6.chunk.js"
+    "static/js/2.a4788d91.chunk.js",
+    "static/css/main.bfe35966.chunk.css",
+    "static/js/main.995aaed5.chunk.js"
   ]
 }

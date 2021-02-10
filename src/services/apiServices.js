@@ -3,7 +3,7 @@ const headers = {
     "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDA1MGE3NzNkNGE1YjAwMjBjODA2MzIiLCJpYXQiOjE2MTA5NDMwOTV9.RQKna4r_MW8OlnFsskLElUaAJdf2HsvY9UfOvVqQQYg"
 };
 export const getProducts = async () => {
-    const url = `https://coding-challenge-api.aerolab.co/products`;
+    const url = getURL('products');
     const response = await fetch(url, { headers });
     const data = await response.json();
     return data;
@@ -26,7 +26,7 @@ export const addPointsService = async (points) => {
 };
 export const redeemProducts = async (productId) => {
     const objProductId = { productId: productId }
-    const url = `https://coding-challenge-api.aerolab.co/redeem`;
+    const url = getURL('redeem');
     const response = await fetch(url, {
         method: 'POST',
         body: JSON.stringify(objProductId),
@@ -35,8 +35,13 @@ export const redeemProducts = async (productId) => {
     const data = await response.json();
     return data;
 };
-
+export const getHistory = async () => {
+    const url = getURL('user/history');
+    const response = await fetch(url, { headers });
+    const data = await response.json();
+    return data;
+}
 
 function getURL(url) {
     return `https://coding-challenge-api.aerolab.co/${url}`
-}
+};

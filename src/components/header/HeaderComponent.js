@@ -2,16 +2,7 @@ import React, { useEffect } from 'react'
 
 import './HeaderComponent.css';
 
-export const HeaderComponent = ({ onUser, userInfo, onPoints }) => {
-    useEffect(() => {
-        onUser();
-    }, [])
-
-    const updateFilters = (event) => {
-        const { value } = event.target;
-        onPoints(value);
-    }
-
+export const HeaderComponent = ({ onUser, userInfo, onPoints, onHistory }) => {
     const pricesList = [
         {
             value: 0,
@@ -30,6 +21,20 @@ export const HeaderComponent = ({ onUser, userInfo, onPoints }) => {
             key: '7500 points'
         }
     ];
+
+    useEffect(() => {
+        onUser();
+    }, [])
+
+    const handleHistory = () => {
+        onHistory();
+    }
+
+    const updateFilters = (event) => {
+        const { value } = event.target;
+        onPoints(value);
+    }
+
 
 
     return (
@@ -54,7 +59,16 @@ export const HeaderComponent = ({ onUser, userInfo, onPoints }) => {
                 <div className="navbar-collapse collapse" id="navbarColor03">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item mr-5 ml-5">
-                            <a className="nav-link" data-target="#exampleModal">Historical</a>
+                            <button
+                                type="button"
+                                className="btn btn-info"
+                                onClick={() => handleHistory()}
+                            >
+                                Shopping history
+                                <span className="badge badge-pill badge-info">
+
+                                </span>
+                            </button>
                         </li>
                         <li className="nav-item dropdown">
                             <div className="form-group search-button ">
@@ -63,7 +77,11 @@ export const HeaderComponent = ({ onUser, userInfo, onPoints }) => {
                                     onChange={(e) => updateFilters(e)}
                                 >
                                     {pricesList.map((price, index) =>
-                                        <option key={index} defaultValue="0" value={price.value}>{price.key}</option>
+                                        <option
+                                            key={index}
+                                            defaultValue="0"
+                                            value={price.value}>{price.key}
+                                        </option>
                                     )}
                                 </select>
                             </div>

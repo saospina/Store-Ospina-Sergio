@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 
 import HeaderComponent from "./HeaderComponent";
 import { userThunk, pointsThunk } from "../../redux/thunks/UserThunk";
+import { historyThunk } from '../../redux/thunks/HistoryThunk';
 
 const mapStateToProps = ({UserReducer}) => {
     return {
@@ -16,6 +17,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         onPoints: (points) => {
             dispatch(pointsThunk(points));
+        },
+        onHistory: () => {
+            dispatch(historyThunk())
         }
     };
 };

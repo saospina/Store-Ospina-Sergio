@@ -35,7 +35,7 @@ const ContentComponent = ({ getProducts, products, userInfo, onRedeem, onUser })
                                         ) :
                                         (<button type="button" className="btn btn-success"
                                         onClick={(e) => handleRedeem(product._id, e)}>
-                                            Buy now <span className="badge rounded-pill bg-info">{product.cost}</span>
+                                            Buy now <span className="badge rounded-pill bg-info">{product.cost}</span> 
                                         </button>
                                         )
                                 }

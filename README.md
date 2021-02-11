@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+This application is part of the "Advanced front-end in React" course from Acamica. This is a web application of a system for exchanging points for products. It's developed using React.js, Bootstrap, React-Bootstrap, Redux Thunk and Redux.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

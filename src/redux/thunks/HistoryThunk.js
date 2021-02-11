@@ -7,5 +7,5 @@ export const historyThunk = () => async (dispatch) => {
     const response = await getHistory();
     dispatch(showModalHistory(response));
     dispatch(hideSpinner());
-    dispatch(showModal());
+    dispatch(showModal("history"));
   };

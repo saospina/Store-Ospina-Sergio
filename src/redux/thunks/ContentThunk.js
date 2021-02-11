@@ -7,6 +7,7 @@ import {
     hideSpinner
 } from '../actions/ContentAction';
 import { getProducts, redeemProducts } from '../../services/apiServices';
+import { showModal } from '../actions/HistoryAction';
 
 export const mostRecentProductsThunk = () => async (dispatch) => {
   const response = await getProducts();
@@ -25,4 +26,5 @@ export const redeemProductsThunk = (productId) => async (dispatch) => {
   const response = await redeemProducts(productId);
   dispatch(redeemByProduct(response));
   dispatch(hideSpinner());
+  dispatch(showModal('confirmation'));
 }

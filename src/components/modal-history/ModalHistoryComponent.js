@@ -22,12 +22,15 @@ const ModalHistoryComponent = ({ products, modal, handleClose }) => {
                             <p className="text-body">{product.name}</p>
                             <ul className="text-dark">
                                 <li>
+                                    Price:
                                     {product.cost}
                                 </li>
                                 <li>
+                                    Category:
                                     {product.category}
                                 </li>
                                 <li>
+                                    Date:
                                     {product.createDate}
                                 </li>
                                 <li>
@@ -36,7 +39,7 @@ const ModalHistoryComponent = ({ products, modal, handleClose }) => {
                                         rel="noreferrer"
                                         href={product.img.hdUrl}
                                     >
-                                        Product image
+                                        Product image:
                                     </a>
                                 </li>
                             </ul>

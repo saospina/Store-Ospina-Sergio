@@ -7,9 +7,10 @@ export const showModalHistory = (historyProducts) => ({
     type: SHOW_MODAL_HISTORY,
     payload: { historyProducts }
   });
-  export const showModal = () => dispatch => {
+  export const showModal = (modalType) => dispatch => {
     dispatch({
-      type: "SHOW_MODAL"
+      type: "SHOW_MODAL",
+      modalType
     })
   };
   export const hideModal = () => dispatch => {

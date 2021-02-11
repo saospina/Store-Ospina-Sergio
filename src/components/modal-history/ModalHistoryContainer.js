@@ -3,10 +3,11 @@ import ModalHistoryComponent from './ModalHistoryComponent';
 import { hideModal } from '../../redux/actions/HistoryAction';
 
 const mapStateToProps = ({ HistoryReducer }) => {
-    const { data, isModal } = HistoryReducer
+
+    const { data, modalType } = HistoryReducer
     return {
         products: data,
-        modal: isModal
+        modal: (modalType === 'history') ? true : false
     };
 };
 

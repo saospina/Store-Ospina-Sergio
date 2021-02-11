@@ -2,7 +2,8 @@ import { SHOW_MODAL_HISTORY, SHOW_MODAL, HIDE_MODAL } from '../actions/HistoryAc
 
 const initialState = {
     data: [],
-    isModal: false
+    isModal: false,
+    modalType: null
 }
 
 const HistoryReducer = (state = initialState, action) => {
@@ -10,9 +11,12 @@ const HistoryReducer = (state = initialState, action) => {
         case SHOW_MODAL_HISTORY:
             return { ...state, data: action.payload.historyProducts };
         case SHOW_MODAL:
-            return { ...state, isModal: true };
+            return { 
+                ...state, 
+                modalType: action.modalType 
+            };
         case HIDE_MODAL:
-            return { ...state, isModal: false };
+            return initialState
         default:
             return state
     }
